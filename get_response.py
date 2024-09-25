@@ -7,7 +7,7 @@ from langchain_openai import OpenAIEmbeddings
 from load_docs import load_api_data
 
 PINECONE_KEY = os.getenv("PINECONE_KEY")
-OPENAI_KEY = os.getenv("OPENAI_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 index_name = "api-doc"
 
