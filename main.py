@@ -19,10 +19,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-spa_path = "/web"
-
-app.mount("/", StaticFiles(directory=spa_path, html=True), name="spa")
-
+spa_path = "./web"
 
 class Q(BaseModel):
     query: str
@@ -32,3 +29,6 @@ class Q(BaseModel):
 @app.post("/api/ask")
 def read_root(q: Q):
     return inference(q.query)
+
+
+app.mount("/", StaticFiles(directory=spa_path, html=True), name="spa")
