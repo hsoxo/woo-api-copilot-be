@@ -13,7 +13,7 @@ app = FastAPI()
 # Set up CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # List of allowed origins
+    allow_origins=["http://localhost:3000", "https://woo-api.hhe.by"],  # List of allowed origins
     allow_credentials=True,  # Allows cookies and other credentials
     allow_methods=["*"],  # Allows all HTTP methods (GET, POST, etc.)
     allow_headers=["*"],  # Allows all headers
